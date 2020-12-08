@@ -1,0 +1,246 @@
+@@font-face {
+
+}
+
+body
+{
+  background: #ffffff;
+  font-family: sans-serif;
+  color: #000000;
+}
+
+.main_wrapper{
+
+  width: 1200px;
+  margin: auto;
+}
+
+/* header */
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.title{
+  display: flex;
+  padding-bottom: 5px;
+
+
+}
+
+
+h1 {
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0 0 0 0;
+
+}
+
+/* Naviguation */
+
+nav ul{
+  text-align: left;
+  font-family: sans-serif;
+  color: #000000;
+  list-style-type: none;
+}
+
+
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+}
+
+nav li
+{
+    margin-right: 15px;
+}
+
+nav a
+{
+    font-size: 20px;
+    color: #000000;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+.image_background{          /*  ?  */
+    width: 1200px;
+    height: 500px;
+
+}
+
+.subtitle{                  /*  ?  */
+  display: flex;
+  width: 300px;
+  height: 60px;
+  background-image: url('./assets/background-image.jpg');
+
+}
+
+h2{                         /*  ?  */
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+
+
+}
+
+/* Section */
+
+.column{
+display:flex;
+padding:30px;
+margin: auto;
+}                           /* séparer text*/
+
+.text_left{
+  font-weight: bold;
+  text-align: left;
+  text-align: justify;
+  letter-spacing: 0.50px;
+  width: 400px;
+  height: 100px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+
+}
+
+.text_right{
+  font-weight: bold;
+  text-align: left;
+  text-align: justify;
+  letter-spacing: 0.50px;
+  width: 400px;
+  height: 100px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+.Projects{
+  display: flex;
+
+}
+
+.project1{
+  width: 300px;
+  height: 200px;
+  margin: 30px 80px 60px 30px;
+
+  }
+.project2{
+    width: 300px;
+    height: 200px;
+    margin: 30px 80px 60px 30px;
+
+}
+
+.project3{
+      width: 300px;
+      height: 200px;
+      margin: 30px 80px 30px 30px;
+
+}
+
+.define{
+  display: flex;
+  margin: 10px 0 80px 30px;
+}
+
+
+h3{
+
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #000000
+
+}
+
+
+.color-background{
+  display: flex;
+  width: 1200px;
+  height: 125px;
+  background-color: #08fa9a
+}
+
+.Newsletter{
+font-weight: bold;
+font-size: 20px;
+font-family: sans-serif;
+}
+
+.text{      /* problème avec class */
+
+
+
+}
+
+
+
+.oval{
+  display: flex;
+  margin-left: auto;
+  vertical-align: middle;
+
+}
+
+.smaller-image{
+  width: 100px;
+  border-radius: 50%;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.we_are{
+  display: flex;
+  width: 300px;
+  height: 60px;
+  background-color: #000000;
+
+
+}
+
+h2{
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #ffffff
+
+}
+
+
+footer{
+  display: flex;
+  vertical-align: middle;
+}
+
+.contact{
+  width: 200px;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link{
+    width: 200px;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.place{
+    width: 200px;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
