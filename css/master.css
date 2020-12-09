@@ -1,106 +1,103 @@
-@@font-face {
+@@font-face {}
 
-}
-
-body
-{
+body {
   background: #ffffff;
   font-family: sans-serif;
   color: #000000;
+  margin: 0;
+  padding: 0;
 }
 
-.main_wrapper{
-
-  width: 1200px;
+.main_wrapper {
   margin: auto;
 }
 
 /* header */
 
-header{
+header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  height: 50px;
 }
 
-.title{
+.title {
   display: flex;
   padding-bottom: 5px;
-
-
 }
-
 
 h1 {
   font-family: sans-serif;
   font-size: 30px;
   font-weight: normal;
   margin: 0 0 0 0;
-
 }
 
 /* Naviguation */
 
-nav ul{
+nav ul {
   text-align: left;
   font-family: sans-serif;
   color: #000000;
   list-style-type: none;
 }
 
-
-
-nav ul
-{
-    list-style-type: none;
-    display: flex;
-}
-
-nav li
-{
-    margin-right: 15px;
-}
-
-nav a
-{
-    font-size: 20px;
-    color: #000000;
-    padding-bottom: 3px;
-    text-decoration: none;
-}
-
-.image_background{          /*  ?  */
-    width: 1200px;
-    height: 500px;
-
-}
-
-.subtitle{                  /*  ?  */
+nav ul {
+  list-style-type: none;
   display: flex;
-  width: 300px;
-  height: 60px;
-  background-image: url('./assets/background-image.jpg');
-
 }
 
-h2{                         /*  ?  */
+nav li {
+  margin-right: 15px;
+}
+
+nav a {
+  font-size: 20px;
+  color: #000000;
+  padding-bottom: 3px;
+  text-decoration: none;
+}
+
+.image_background {
+  /*  ?  */
+  width: 100%;
+  object-fit: cover;
+}
+
+.image_background img {
+  /*  ?  */
+  height: calc(100vh - 50px);
+}
+
+.subtitle {
+  /*  ?  */
+  display: flex;
+  position: absolute;
+  color: white;
+  bottom: 0;
+  /* right: 200px; */
+  margin: 50px;
+}
+
+h2 {
+  /*  ?  */
   font-size: 15px;
   font-family: sans-serif;
   font-weight: bold;
   color: #ffffff;
-
-
 }
 
 /* Section */
 
-.column{
-display:flex;
-padding:30px;
-margin: auto;
-}                           /* séparer text*/
+.column {
+  display: flex;
+  padding: 30px;
+  margin: auto;
+}
 
-.text_left{
+/* séparer text*/
+
+.text_left {
   font-weight: bold;
   text-align: left;
   text-align: justify;
@@ -109,10 +106,9 @@ margin: auto;
   height: 100px;
   margin-left: 100px;
   margin-bottom: 20px;
-
 }
 
-.text_right{
+.text_right {
   font-weight: bold;
   text-align: left;
   text-align: justify;
@@ -123,76 +119,64 @@ margin: auto;
   margin-bottom: 20px;
 }
 
-.Projects{
+.Projects {
   display: flex;
-
 }
 
-.project1{
+.project1 {
   width: 300px;
   height: 200px;
   margin: 30px 80px 60px 30px;
-
-  }
-.project2{
-    width: 300px;
-    height: 200px;
-    margin: 30px 80px 60px 30px;
-
 }
 
-.project3{
-      width: 300px;
-      height: 200px;
-      margin: 30px 80px 30px 30px;
-
+.project2 {
+  width: 300px;
+  height: 200px;
+  margin: 30px 80px 60px 30px;
 }
 
-.define{
+.project3 {
+  width: 300px;
+  height: 200px;
+  margin: 30px 80px 30px 30px;
+}
+
+.define {
   display: flex;
   margin: 10px 0 80px 30px;
 }
 
-
-h3{
-
+h3 {
   font-size: 25px;
   font-family: sans-serif;
   font-weight: bold;
   color: #000000
-
 }
 
-
-.color-background{
+.color-background {
   display: flex;
   width: 1200px;
   height: 125px;
   background-color: #08fa9a
 }
 
-.Newsletter{
-font-weight: bold;
-font-size: 20px;
-font-family: sans-serif;
+.Newsletter {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: sans-serif;
 }
 
-.text{      /* problème avec class */
-
-
-
+.text {
+  /* problème avec class */
 }
 
-
-
-.oval{
+.oval {
   display: flex;
   margin-left: auto;
   vertical-align: middle;
-
 }
 
-.smaller-image{
+.smaller-image {
   width: 100px;
   border-radius: 50%;
   padding: 30px;
@@ -200,47 +184,42 @@ font-family: sans-serif;
   margin-right: auto;
 }
 
-
-.we_are{
+.we_are {
   display: flex;
   width: 300px;
   height: 60px;
   background-color: #000000;
-
-
 }
 
-h2{
+h2 {
   font-size: 15px;
   font-family: sans-serif;
   font-weight: bold;
   color: #ffffff
-
 }
 
-
-footer{
+footer {
   display: flex;
   vertical-align: middle;
 }
 
-.contact{
+.contact {
   width: 200px;
   padding: 30px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.link{
-    width: 200px;
-    padding: 30px;
-    margin-left: auto;
-    margin-right: auto;
+.link {
+  width: 200px;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.place{
-    width: 200px;
-    padding: 30px;
-    margin-left: auto;
-    margin-right: auto;
+.place {
+  width: 200px;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
