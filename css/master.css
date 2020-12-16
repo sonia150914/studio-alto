@@ -103,20 +103,49 @@ h2 {
 .column p {
   font-size: 15px;
 }
+/* ------------------------------------------------------------------------------------ PROJECTS------------------------------------------------------------------------------------ */
 
 .container_project {
   display: flex;
 }
 
-.project {
-  display: flex;
-  margin-left: 15px;
-  margin-right: 15px;
+.container_project .col {
+  flex: 1;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.image-fluid {
-  max-width: 100%;
-  height: auto;
+.container_project .col .box {
+  width: 100%;
+  height: 0;
+  padding-bottom: 61.803398875%;
+  position: relative;
+}
+.container_project .col .project {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.container_project .col .projet1 {
+  background: url("../assets/projet1.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.container_project .col .projet2 {
+  background: url("../assets/projet2.jpg") no-repeat center center;
+
+  background-size: cover;
+}
+
+.container_project .col .projet3 {
+  background: url("../assets/projet3.jpg") no-repeat center center;
+  background-size: cover;
+
 }
 
 .subtitle_project {
