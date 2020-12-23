@@ -1,5 +1,4 @@
-@@font-face {}
-
+/* ------------------------------------------------------------------------------------GLOBAL------------------------------------------------------------------------------------ */
 body {
   background: #ffffff;
   font-family: sans-serif;
@@ -8,11 +7,21 @@ body {
   padding: 0;
 }
 
+.container {
+  display: flex;
+}
+
+.container .col {
+  flex: 1;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .main_wrapper {
   margin: auto;
 }
 
-/* header */
+/* ------------------------------------------------------------------------------------HEADER------------------------------------------------------------------------------------ */
 header {
   display: flex;
   justify-content: space-between;
@@ -32,7 +41,7 @@ h1 {
   margin: 0 0 0 0;
 }
 
-/* Naviguation */
+/* ------------------------------------------------------------------------------------NAVIGATION------------------------------------------------------------------------------------ */
 nav ul {
   text-align: left;
   font-family: sans-serif;
@@ -70,7 +79,7 @@ nav a {
   position: absolute;
   color: white;
   bottom: 0;
-  margin: 50px;
+  margin: 10px;
 }
 
 h2 {
@@ -79,49 +88,26 @@ h2 {
   font-weight: bold;
 }
 
-.container_column {
-  display: flex;
+/* ------------------------------------------------------------------------------------TEXT------------------------------------------------------------------------------------ */
+.container .col .text1 {
+  margin: 25px 0 25px 45px;
+  line-height: 25px;
 }
 
-.column {
-  display: flex;
-  margin-left: 100px;
-  margin-right: 100px;
+.container .col .text2 {
+  margin: 25px 45px 25px 0;
+  line-height: 25px;
 }
 
-.text-1 {
-  margin-right: 50px;
-  width: auto;
-  height: auto;
-}
-
-.text-2 {
-  width: auto;
-  height: auto;
-}
-
-.column p {
-  font-size: 15px;
-}
 /* ------------------------------------------------------------------------------------ PROJECTS------------------------------------------------------------------------------------ */
-
-.container_project {
-  display: flex;
-}
-
-.container_project .col {
-  flex: 1;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.container_project .col .box {
+.container .col .box {
   width: 100%;
   height: 0;
   padding-bottom: 61.803398875%;
   position: relative;
 }
-.container_project .col .project {
+
+.container .col .project {
   position: absolute;
   left: 0;
   top: 0;
@@ -131,136 +117,118 @@ h2 {
   z-index: 0;
 }
 
-.container_project .col .projet1 {
+.container .col .projet1 {
   background: url("../assets/projet1.jpg") no-repeat center center;
   background-size: cover;
 }
 
-.container_project .col .projet2 {
+.container .col .projet2 {
   background: url("../assets/projet2.jpg") no-repeat center center;
-
   background-size: cover;
 }
 
-.container_project .col .projet3 {
+.container .col .projet3 {
   background: url("../assets/projet3.jpg") no-repeat center center;
   background-size: cover;
-
 }
 
 .subtitle_project {
   display: flex;
-  margin: 15px;
+  margin: 10px;
+  margin-bottom: 100px;
 }
 
-h3 {
-  font-size: 20px;
-  font-family: sans-serif;
+.subtitle_project h2 {
   font-weight: bold;
-  color: #000000;
 }
 
-.container {
-  display: flex;
-  height: 200px;
-  width: auto;
-}
-
-.color_background {
+/* ------------------------------------------------------------------------------------SIGN-UP------------------------------------------------------------------------------------ */
+.container .color {
   background-color: #08fa9a;
+  width: 100%;
 }
 
-.newsletter {
-  display: flex;
-  margin: auto;
-}
+.container .col .newsletter {}
 
 .newsletter p {
   font-size: 20px;
-  margin: auto;
+  font-weight: bold;
 }
 
-.sign-up {
-  display: flow-root;
-  margin: auto;
+.container .col .sign-up {}
+
+/* ------------------------------------------------------------------------------------TEAM------------------------------------------------------------------------------------ */
+.container .col .oval {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
 }
 
-.sign-up p {
-  display: flex;
-}
-
-.container-oval {
-  display: flex;
-  margin: 100px;
-}
-
-.oval {
-  display: flex;
-  margin: 25px;
-}
-
-.smaller-image {
+.container .col .oval .member-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
   border-radius: 50%;
-  max-width: 100%;
-  height: auto;
 }
 
-.we_are {
+.container .col .oval .portrait1 {
+  background: url("../assets/portrait1.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.container .col .oval .portrait2 {
+  background: url("../assets/portrait2.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.container .col .oval .portrait3 {
+  background: url("../assets/portrait3.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.container .col .oval .portrait4 {
+  background: url("../assets/portrait4.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.container .col .oval .portrait5 {
+  background: url("../assets/portrait5.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.we-are {
   display: flex;
 }
 
-.color {
+.we-are .color {
   background-color: #000000;
   margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 10px;
 }
 
-.we_are h2 {
-  font-size: 20px;
-  font-family: sans-serif;
-  font-weight: 100;
+.we-are h2 {
+  font-size: 15px;
+  font-weight: lighter;
   color: #ffffff;
   margin: auto;
 }
 
-.container_footer {
-  display: flex;
-  width: auto;
+/* ------------------------------------------------------------------------------------FOOTER------------------------------------------------------------------------------------ */
+.container .col .contact p {
+  font-size: medium;
 }
 
-.contact {
-  margin: 50px;
+.container .col .link p {
+  font-size: medium;
 }
 
-.contact h4 {}
-
-.e-mail {}
-
-.e-mail p {}
-
-.phone {}
-
-.phone p {}
-
-.link {
-  margin: 50px;
+.container .col .place p {
+  font-size: medium;
 }
-
-.link h4 {}
-
-.fb {}
-
-.fb p {}
-
-.insta {}
-
-.insta p {}
-
-.place {
-  margin: 50px;
-}
-
-.place h4 {}
-
-.address {}
-
-.address p {}
