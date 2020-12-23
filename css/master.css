@@ -146,16 +146,32 @@ h2 {
 .container .color {
   background-color: #08fa9a;
   width: 100%;
+  margin-bottom: 150px;
 }
 
-.container .col .newsletter {}
+.container .col .item {
+  width: 100%;
+  height: 0;
+  padding-bottom: 30%;
+  position: relative;
+}
+
+.container .col .item .newsletter {
+  position: absolute;
+  left: 200px;
+  top: 100px;
+}
 
 .newsletter p {
   font-size: 20px;
   font-weight: bold;
 }
 
-.container .col .sign-up {}
+.container .col .item .sign-up {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 320px;
+}
 
 /* ------------------------------------------------------------------------------------TEAM------------------------------------------------------------------------------------ */
 .container .col .oval {
