@@ -22,7 +22,50 @@ body {
 }
 
 .btn {
-  background-color: white;
+  background-color: black;
+  color: white;
+}
+
+/* ------------------------------------------------------------------------------------RESPONSIVE------------------------------------------------------------------------------------ */
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .col {}
+
+  .main_wrapper {
+    margin: auto;
+  }
+
+  .title h1 {
+    display: none;
+  }
+
+  .container .col .projet2 {
+    display: none;
+  }
+
+  .container .col .projet3 {
+    display: none;
+  }
+
+  .subtitle_project h2 {
+    font-size: 20px;
+  }
+
+  .container .newsletter p {
+    padding: 20px;
+    margin: auto;
+  }
+
+  .sign-up p {
+    display: none;
+  }
+
+  .container .sign-up {
+    margin: auto;
+  }
 }
 
 /* ------------------------------------------------------------------------------------HEADER------------------------------------------------------------------------------------ */
@@ -94,12 +137,10 @@ h2 {
 
 /* ------------------------------------------------------------------------------------TEXT------------------------------------------------------------------------------------ */
 .container .col .text1 {
-  margin: 25px 0 25px 45px;
   line-height: 25px;
 }
 
 .container .col .text2 {
-  margin: 25px 45px 25px 0;
   line-height: 25px;
 }
 
@@ -147,16 +188,10 @@ h2 {
 }
 
 /* ------------------------------------------------------------------------------------SIGN-UP------------------------------------------------------------------------------------ */
-
 .bg-green {
   background-color: #08fa9a;
   margin-bottom: 150px;
   padding: 2%;
-
-}
-
-.container .col .item {
-  width: 100%;
 }
 
 .container .col .newsletter, .container .col .sign-up-wrapper {
@@ -168,12 +203,12 @@ h2 {
 .container .col .newsletter {
   justify-content: flex-end;
 }
+
 .newsletter p {
   font-size: 20px;
   margin: 0;
   font-weight: bold;
 }
-
 
 /* ------------------------------------------------------------------------------------TEAM------------------------------------------------------------------------------------ */
 .container .col .oval {
