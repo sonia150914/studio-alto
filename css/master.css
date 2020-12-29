@@ -47,6 +47,10 @@ body {
     flex-direction: column;
   }
 
+  .header {
+    display: none;
+  }
+
   /* ------------------------------------------------------------------------------------ TEXT------------------------------------------------------------------------------------ */
   .section-text .container {
     flex-direction: column;
@@ -60,6 +64,7 @@ body {
   .subtitle_project h2 {
     font-size: 20px;
     margin-bottom: 0px;
+    padding: 10px;
   }
 
   /* ------------------------------------------------------------------------------------SIGN-UP------------------------------------------------------------------------------------ */
@@ -90,8 +95,13 @@ body {
     display: none;
   }
 
-  .footer-section {
+  .footer-contact .container .col:nth-child(1) p, .footer-contact .container .col:nth-child(2), .footer-contact .container .col:nth-child(3) {
     display: none;
+  }
+
+  .contact h4 {
+    font-size: 20px;
+    padding: 10px;
   }
 }
 
