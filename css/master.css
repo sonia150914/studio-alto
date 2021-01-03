@@ -17,93 +17,6 @@ body {
   padding-right: 10px;
 }
 
-.main_wrapper {
-  margin: auto;
-}
-
-/* ------------------------------------------------------------------------------------RESPONSIVE------------------------------------------------------------------------------------ */
-@media (max-width: 575.98px) {
-
-  /* ------------------------------------------------------------------------------------GLOBAL------------------------------------------------------------------------------------ */
-  .container .col {
-    flex: 1;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  /* ------------------------------------------------------------------------------------HEADER------------------------------------------------------------------------------------ */
-  .title h1 {
-    display: none;
-  }
-
-  .image_background {}
-
-  .subtitle h2 {
-    font-size: 20px;
-  }
-
-  /* ------------------------------------------------------------------------------------NAVIGATION------------------------------------------------------------------------------------ */
-  .nav-menu ul {
-    flex-direction: column;
-  }
-
-  .header {
-    display: none;
-  }
-
-  /* ------------------------------------------------------------------------------------ TEXT------------------------------------------------------------------------------------ */
-  .section-text .container {
-    flex-direction: column;
-  }
-
-  /* ------------------------------------------------------------------------------------ PROJECTS------------------------------------------------------------------------------------ */
-  .section-projects .container .col:nth-child(2), .section-projects .container .col:nth-child(3) {
-    display: none;
-  }
-
-  .subtitle_project h2 {
-    font-size: 20px;
-    margin-bottom: 0px;
-    padding: 10px;
-  }
-
-  /* ------------------------------------------------------------------------------------SIGN-UP------------------------------------------------------------------------------------ */
-  .section-newsletter .container {
-    flex-direction: column;
-  }
-
-  .container .newsletter p {
-    margin: auto;
-    padding: 20px;
-  }
-
-  .container .sign-up {
-    margin: auto;
-    padding: 20px;
-  }
-
-  .sign-up p {
-    display: none;
-  }
-
-  /* ------------------------------------------------------------------------------------ TEAM ------------------------------------------------------------------------------------ */
-  .section-team .container .col:nth-child(2), .section-team .container .col:nth-child(3), .section-team .container .col:nth-child(4) {
-    display: none;
-  }
-
-  .section-we-are {
-    display: none;
-  }
-
-  .footer-contact .container .col:nth-child(1) p, .footer-contact .container .col:nth-child(2), .footer-contact .container .col:nth-child(3) {
-    display: none;
-  }
-
-  .contact h4 {
-    font-size: 20px;
-    padding: 10px;
-  }
-}
 
 /* ------------------------------------------------------------------------------------HEADER------------------------------------------------------------------------------------ */
 header {
@@ -124,6 +37,35 @@ h1 {
   font-weight: normal;
   margin: 0 0 0 0;
 }
+
+#header-mobile {
+  display: none;
+}
+
+#header-mobile .burger-menu {
+  background: url("../assets/burgerMenu.svg") center center no-repeat;
+  background-size: 20px;
+  height: 20px;
+  width: 20px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+#header-mobile .menu-mobile {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  display: none;
+}
+
+
+#header-mobile .menu-mobile.open {
+  display: flex;
+}
+
 
 /* ------------------------------------------------------------------------------------NAVIGATION------------------------------------------------------------------------------------ */
 nav ul {
@@ -326,4 +268,98 @@ h2 {
 
 .container .col .place p {
   font-size: medium;
+}
+
+/* ------------------------------------------------------------------------------------RESPONSIVE------------------------------------------------------------------------------------ */
+@media (max-width: 575.98px) {
+
+
+  /* ------------------------------------------------------------------------------------GLOBAL------------------------------------------------------------------------------------ */
+  .container .col {
+    flex: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* ------------------------------------------------------------------------------------HEADER------------------------------------------------------------------------------------ */
+  #header-mobile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+  }
+
+  .title h1 {
+    display: none;
+  }
+
+  .image_background {
+  }
+
+  .subtitle h2 {
+    font-size: 20px;
+  }
+
+  /* ------------------------------------------------------------------------------------NAVIGATION------------------------------------------------------------------------------------ */
+  .nav-menu ul {
+    flex-direction: column;
+  }
+
+  .header {
+    display: none;
+  }
+
+  /* ------------------------------------------------------------------------------------ TEXT------------------------------------------------------------------------------------ */
+  .section-text .container {
+    flex-direction: column;
+  }
+
+  /* ------------------------------------------------------------------------------------ PROJECTS------------------------------------------------------------------------------------ */
+  .section-projects .container .col:nth-child(2), .section-projects .container .col:nth-child(3) {
+    display: none;
+  }
+
+  .subtitle_project h2 {
+    font-size: 20px;
+    margin-bottom: 0px;
+    padding: 10px;
+  }
+
+  /* ------------------------------------------------------------------------------------SIGN-UP------------------------------------------------------------------------------------ */
+  .section-newsletter .container {
+    flex-direction: column;
+  }
+
+  .container .newsletter p {
+    margin: auto;
+    padding: 20px;
+  }
+
+  .container .sign-up {
+    margin: auto;
+    padding: 20px;
+  }
+
+  .sign-up p {
+    display: none;
+  }
+
+  /* ------------------------------------------------------------------------------------ TEAM ------------------------------------------------------------------------------------ */
+  .section-team .container .col:nth-child(2), .section-team .container .col:nth-child(3), .section-team .container .col:nth-child(4) {
+    display: none;
+  }
+
+  .section-we-are {
+    display: none;
+  }
+
+  .footer-contact .container .col:nth-child(1) p, .footer-contact .container .col:nth-child(2), .footer-contact .container .col:nth-child(3) {
+    display: none;
+  }
+
+  .contact h4 {
+    font-size: 20px;
+    padding: 10px;
+  }
 }
