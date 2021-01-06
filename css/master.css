@@ -50,23 +50,29 @@ h1 {
   cursor: pointer;
 }
 
-#header-mobile .menu-mobile {
+.menu-mobile {
   position: absolute;
   height: 100vh;
   width: 100%;
-  margin-top: 200px;
+  /*margin-top: 200px;*/
   line-height: 100px;
-  align-items: center;
-  justify-content: center;
+  /*align-items: center;*/
+  /*justify-content: center;*/
   background-color: white;
   display: none;
 }
 
-#header-mobile .menu-mobile.open {
-  display: flex;
+
+.menu-mobile.open {
+  display: block;
 }
 
-#header-mobile .cross-menu {
+.menu-mobile .menu-mobile-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-mobile .menu-mobile-header .cross-menu {
   background: url("../assets/crossMenu.svg") center center no-repeat;
   background-size: 20px;
   height: 20px;
@@ -304,7 +310,8 @@ h2 {
     display: none;
   }
 
-  .image_background {}
+  .image_background {
+  }
 
   .subtitle h2 {
     font-size: 20px;
@@ -313,6 +320,7 @@ h2 {
   /* ------------------------------------------------------------------------------------NAVIGATION------------------------------------------------------------------------------------ */
   .nav-menu ul {
     flex-direction: column;
+    align-items: center;
   }
 
   .header {
