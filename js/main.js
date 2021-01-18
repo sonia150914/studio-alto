@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let shift = 0;
 
   next.addEventListener('click', () => {
+
     if (current < elementsCount) {
       slider.classList.toggle('move');
       shift += slideWidth;
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   prev.addEventListener('click', () => {
+
     if (current > 1) {
       slider.classList.toggle('move');
       shift -= slideWidth;
