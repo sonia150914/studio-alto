@@ -1,3 +1,8 @@
+:root {
+  --slider-width: 450px;
+  --slide-count: 5;
+}
+
 /* ------------------------------------------------------------------------------------GLOBAL------------------------------------------------------------------------------------ */
 body {
   background: #ffffff;
@@ -9,6 +14,10 @@ body {
 
 .container {
   display: flex;
+}
+
+.scroll-locked {
+  position: fixed;
 }
 
 .container .col {
@@ -105,6 +114,61 @@ nav a {
   color: #000000;
   padding-bottom: 3px;
   text-decoration: none;
+}
+
+/* ------------------------------------------------------------------------------------SLIDER------------------------------------------------------------------------------------ */
+.slider-wrapper {
+  width: 470px;
+  height: 330px;
+  border: 2px solid #151615;
+  position: relative;
+}
+
+.slider-container {
+  width: var(--slider-width);
+  height: 320px;
+  margin-left: -5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.slider-container .slider {
+  position: relative;
+  height: 450px;
+  width: calc(var(--slider-width) * var(--slide-count));
+  transition: transform 1.5s;
+}
+
+.next,
+.prev {
+  position: absolute;
+  top: 43%;
+  border: 1px solid #000;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  color: #000;
+  background: #fff;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  z-index: 20;
+}
+
+.prev {
+  left: -15%;
+}
+
+.next {
+  left: 105%;
+}
+
+.next:hover,
+.prev:hover {
+  background-color: #151615;
+  color: #fff;
 }
 
 /* ------------------------------------------------------------------------------------SECTION-IMAGE-BACKGROUND------------------------------------------------------------------------------------ */
