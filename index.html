@@ -15,8 +15,8 @@
 
   <header class="header">
 
-      <div class="title-studio-alto">
-        <h1>Studio Alto</h1>
+    <div class="title-studio-alto">
+      <h1>Studio Alto</h1>
     </div>
 
 
@@ -84,24 +84,54 @@
 
 
 
+  <!-- Slideshow container -->
+
+
+  <div id="slideshow-container">
+
+    <div class="mySlides animation">
+      <img src="./assets/project1.jpg" class="d-block w-50 mx-auto" alt="">
+    </div>
+
+    <div class="mySlides animation">
+      <img src="./assets/project2.jpg" class="d-block w-50 mx-auto" alt="">
+    </div>
+
+
+    <div class="mySlides animation">
+      <img src="./assets/project3.jpg" class="d-block w-50 mx-auto" alt="">
+    </div>
+
+  </div>
+
+  <!-- End of the Slideshow container -->
 
 
   <section class="section-projects">
 
     <div class="container">
 
+
+
       <div class="col">
         <div class="box">
           <div class="project project1" title="boat image">
           </div>
+
         </div>
       </div>
+
+
       <div class="col">
         <div class="box">
           <div class="project project2" title="woman image">
           </div>
         </div>
       </div>
+
+
+
+
       <div class="col">
         <div class="box">
           <div class="project project3" title="mountain image">
@@ -109,7 +139,11 @@
         </div>
 
       </div>
+
+
     </div>
+
+
 
     <div class="subtitle_project">
       <h2>Projects</h2>
@@ -222,6 +256,25 @@
       </div>
   </section>
   <script type="text/javascript" src="./js/main.js"></script>
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1
+      }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+  </script>
+
   </footer>
 
 </body>

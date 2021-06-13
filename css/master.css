@@ -1,6 +1,6 @@
 :root {
-  --slider-width: 450px;
-  --slide-count: 5;
+--slider-width: 450px;
+--slide-count: 5;
 }
 
 /* ------------------------------------------------------------------------------------GLOBAL------------------------------------------------------------------------------------ */
@@ -40,7 +40,6 @@ header {
 h1 {
   font-size: 2rem;
   font-weight: 400;
-
 }
 
 #header-mobile {
@@ -64,7 +63,6 @@ h1 {
   background-color: white;
   display: none;
 }
-
 
 .menu-mobile.open {
   display: block;
@@ -109,11 +107,7 @@ nav a {
   text-decoration: none;
 }
 
-
-
 /* ------------------------------------------------------------------------------------SECTION-IMAGE-BACKGROUND------------------------------------------------------------------------------------ */
-
-
 .image_background img {
   height: calc(100vh - 50px);
   width: 100%;
@@ -177,9 +171,11 @@ h2 {
   background-size: cover;
 }
 
-
-
 /* ------------------------------------------------------------------------------------SLIDER------------------------------------------------------------------------------------ */
+#slideshow-container {
+  display: none;
+}
+
 .slider-wrapper {
   width: 470px;
   height: 330px;
@@ -234,10 +230,6 @@ h2 {
   color: #fff;
 }
 
-
-
-
-
 .subtitle_project {
   display: flex;
   margin: 10px;
@@ -247,7 +239,6 @@ h2 {
 .subtitle_project h2 {
   font-weight: bold;
 }
-
 
 /* ------------------------------------------------------------------------------------NEWSLETTER------------------------------------------------------------------------------------ */
 .bg-green {
@@ -353,13 +344,35 @@ h2 {
   font-size: medium;
 }
 
-
-
-
-
-
-
 /* ------------------------------------------------------------------------------------RESPONSIVE------------------------------------------------------------------------------------ */
+/* Fading animation */
+.animation {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes animation {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes animation {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
 @media only screen and (max-width: 765px) {
 
   /* ------------------------------------------------------------------------------------GLOBAL------------------------------------------------------------------------------------ */
@@ -382,7 +395,6 @@ h2 {
     display: none;
   }
 
-
   .subtitle h2 {
     font-size: 20px;
   }
@@ -403,7 +415,7 @@ h2 {
   }
 
   /* ------------------------------------------------------------------------------------ PROJECTS------------------------------------------------------------------------------------ */
-  .section-projects .container .col:nth-child(2), .section-projects .container .col:nth-child(3) {
+  .section-projects .container .col:nth-child(1), .section-projects .container .col:nth-child(2), .section-projects .container .col:nth-child(3) {
     display: none;
   }
 
@@ -413,6 +425,11 @@ h2 {
 
   .subtitle_project {
     margin-bottom: 20px;
+  }
+
+  /* ------------------------------------------------------------------------------------SLIDER----------------------------------------------------------------------------------- */
+  #slideshow-container {
+    display: flex;
   }
 
   /* ------------------------------------------------------------------------------------NEWSLETTER----------------------------------------------------------------------------------- */
