@@ -1,3 +1,8 @@
+:root {
+  --slider-width: 450px;
+  --slide-count: 5;
+}
+
 /* ------------------------------------------------------------------------------------GLOBAL------------------------------------------------------------------------------------ */
 body {
   background: #ffffff;
@@ -9,6 +14,10 @@ body {
 
 .container {
   display: flex;
+}
+
+.scroll-locked {
+  position: fixed;
 }
 
 .container .col {
@@ -48,7 +57,6 @@ h1 {
   width: 20px;
   margin-right: 15px;
   cursor: pointer;
-  position: fixed;
 }
 
 .menu-mobile {
@@ -56,12 +64,13 @@ h1 {
   height: 100vh;
   width: 100%;
   /*margin-top: 200px;*/
-  line-height: 60px;
+  line-height: 100px;
   /*align-items: center;*/
   /*justify-content: center;*/
   background-color: white;
   display: none;
 }
+
 
 .menu-mobile.open {
   display: block;
@@ -105,6 +114,61 @@ nav a {
   color: #000000;
   padding-bottom: 3px;
   text-decoration: none;
+}
+
+/* ------------------------------------------------------------------------------------SLIDER------------------------------------------------------------------------------------ */
+.slider-wrapper {
+  width: 470px;
+  height: 330px;
+  border: 2px solid #151615;
+  position: relative;
+}
+
+.slider-container {
+  width: var(--slider-width);
+  height: 320px;
+  margin-left: -5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.slider-container .slider {
+  position: relative;
+  height: 450px;
+  width: calc(var(--slider-width) * var(--slide-count));
+  transition: transform 1.5s;
+}
+
+.next,
+.prev {
+  position: absolute;
+  top: 43%;
+  border: 1px solid #000;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  color: #000;
+  background: #fff;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  z-index: 20;
+}
+
+.prev {
+  left: -15%;
+}
+
+.next {
+  left: 105%;
+}
+
+.next:hover,
+.prev:hover {
+  background-color: #151615;
+  color: #fff;
 }
 
 /* ------------------------------------------------------------------------------------SECTION-IMAGE-BACKGROUND------------------------------------------------------------------------------------ */
@@ -159,17 +223,17 @@ h2 {
 }
 
 .container .col .project1 {
-  background: url("../assets/projet1.jpg") no-repeat center center;
+  background: url("../assets/project1.jpg") no-repeat center center;
   background-size: cover;
 }
 
 .container .col .project2 {
-  background: url("../assets/projet2.jpg") no-repeat center center;
+  background: url("../assets/project2.jpg") no-repeat center center;
   background-size: cover;
 }
 
 .container .col .project3 {
-  background: url("../assets/projet3.jpg") no-repeat center center;
+  background: url("../assets/project3.jpg") no-repeat center center;
   background-size: cover;
 }
 
@@ -310,7 +374,8 @@ h2 {
     display: none;
   }
 
-  .image_background {}
+  .image_background {
+  }
 
   .subtitle h2 {
     font-size: 20px;
@@ -344,39 +409,6 @@ h2 {
     margin-bottom: 20px;
   }
 
-  /*#slider {
-    position: relative;
-    width:1280px;
-    margin: auto;
-}
-
-#slider > img {
-  height: 700px;
-}
-
-#precedent, #suivant {
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-    opacity: 0;
-    position: absolute;
-    top: 300px;
-    font-size: 100px;
-    color: rgba(220, 220, 220, 0.8);
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-}
-
-#precedent {
-    left: 0;
-}
-
-#suivant {
-    right: 0;
-}
-
-#slider:hover #precedent, #slider:hover #suivant {
-    opacity: 1;
-}*/
   /* ------------------------------------------------------------------------------------NEWSLETTER----------------------------------------------------------------------------------- */
   .section-newsletter .container {
     flex-direction: column;
@@ -413,28 +445,11 @@ h2 {
   }
 
   /* ------------------------------------------------------------------------------------FOOTER------------------------------------------------------------------------------------ */
-  .section-footer .container {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 30px;
+  .footer-contact .container .col:nth-child(1) p, .footer-contact .container .col:nth-child(2), .footer-contact .container .col:nth-child(3) {
+    display: none;
   }
 
-  .section-footer .container h4 {
-    margin: 10px;
-    font-size: medium;
+  .footer-contact .container .col .contact h4 {
+    font-size: 20px;
   }
-
-  .section-footer .container .col .contact p {
-    margin: 10px;
-    font-size: small;
-  }
-
-  .section-footer .container .col .link p {
-    margin: 10px;
-    font-size: small;
-  }
-
-  .section-footer .container .col .place p {
-    margin: 10px;
-    font-size: small;
-  }
+}
