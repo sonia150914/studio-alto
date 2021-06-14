@@ -107,21 +107,19 @@ nav a {
   text-decoration: none;
 }
 
-/* ------------------------------------------------------------------------------------SECTION-IMAGE-BACKGROUND------------------------------------------------------------------------------------ */
-.image_background img {
-  height: calc(100vh - 50px);
-  width: 100%;
-  object-fit: cover;
-  background-repeat: no-repeat;
+/* ------------------------------------------------------------------------------------IMAGE-BACKGROUND------------------------------------------------------------------------------------ */
+
+
+
+
+.bg-image {
+  background: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.subtitle {
-  display: flex;
-  position: absolute;
-  color: white;
-  bottom: 0;
-  padding: 10px;
-}
+
+
 
 h2 {
   font-size: 20px;
