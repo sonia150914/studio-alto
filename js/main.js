@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var burgerMenu = document.getElementById('burgerMenu')
   var menuMobile = document.querySelector('.menu-mobile')
   var crossBtn = document.getElementById('crossBtn')
-  var body = document.body;
+  var body = document.body
 
   burgerMenu.addEventListener('click', handleOpenMenu)
   crossBtn.addEventListener('click', handleCloseMenu)
@@ -13,60 +13,59 @@ document.addEventListener('DOMContentLoaded', function () {
   function handleOpenMenu (e) {
     e.preventDefault()
     menuMobile.classList.add('open')
-    body.classList.add('scroll-locked');
+    body.classList.add('scroll-locked')
   }
 
   function handleCloseMenu (e) {
     e.preventDefault()
     menuMobile.classList.remove('open')
-    body.classList.remove('scroll-locked');
+    body.classList.remove('scroll-locked')
   }
 
-  /* ------------------------------------------------------------------------------------SLIDER------------------------------------------------------------------------------------ */
+  var slider = document.querySelector('.slider')
 
-  var next = document.querySelector('.next');
-  console.log("NEXT", next);
-  var prev = document.querySelector('.prev');
-  console.log("Prev", prev);
+  var slideIndex = 0
 
-  var slider = document.querySelector('.slider');
-  console.log("slider", slider);
+  var nextBtn = document.getElementById('slideShowNextBtn')
+  var previousBtn = document.getElementById('slideShowPreviousBtn')
+  var slides = document.getElementsByClassName('mySlides')
 
+  function initSlider () {
+    //TODO: Optimiser cette fonction pour cacher tous les slides sauf le premier
+    var i
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none'
+    }
+    slides[0].style.display = 'block'
+  }
 
-  var elementsCount = 5;
-  var current = 1;
-  var slideWidth = 400;
-  var shift = 0;
+  //TODO gérer le cas de la première et de la dernière image: bloquer les btn quand on arrive à la fin et aussi au début
+  function showNextSlide () {
 
+    slides[slideIndex].style.display = 'none'
 
+    slideIndex++
+    // if (slideIndex > slides.length) {
+    //   slideIndex = 1
+    // }
+    slides[slideIndex].style.display = 'block'
+  }
 
-  next.addEventListener('click', function() {
-console.log("next button clicked")
-    if (current < elementsCount) {
-      shift += slideWidth;
-      slider.style.transform = `translateX(-${shift}px)`;
-      current++;
-    } else {
-      shift = 0;
-      current = 1;
-      slider.style.transform = `translateX(${shift}px)`;
-    };
-  });
+  function showPreviousSlide () {
 
-  prev.addEventListener('click', function() {
-    console.log("previous button clicked")
-    if (current > 1) {
-      slider.classList.toggle('move');
-      shift -= slideWidth;
-      current--;
-      slider.style.transform = `translateX(-${shift}px)`;
-    } else if (current === 1) {
-      shift = elementsCount * slideWidth - slideWidth;
-      slider.classList.toggle('move');
-      slider.style.transform = `translateX(-${shift}px)`;
-      current = elementsCount;
-    };
-  });
+    slides[slideIndex].style.display = 'none'
+    // slideIndex++
+    // if (slideIndex > slides.length) {
+    //   slideIndex = 1
+    // }
+    slideIndex--
+    slides[slideIndex].style.display = 'block'
+  }
 
+  nextBtn.addEventListener('click', showNextSlide)
+
+  previousBtn.addEventListener('click', showPreviousSlide)
+
+  initSlider()
 
 })
